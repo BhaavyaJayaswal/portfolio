@@ -5,6 +5,8 @@ body {
     padding: 0;
     background-color: white;
     color: black;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 header {
@@ -52,6 +54,15 @@ footer {
 }
 
 .swoop {
+    position: absolute;
+    /*top: 100%;  Moves it below the navbar */
+    margin: -1px;
+    left: 0;
+    width: 100%;
+    transform: scaleY(-1); /* Flips it vertically */
+    z-index: -1; /* Moves it behind content */
+}
+.swoop2 {
     position: absolute;
     /*top: 100%;  Moves it below the navbar */
     margin: -1px;
@@ -193,4 +204,58 @@ footer {
     display: flex;
     flex-direction: row;
     align-items: top;
+}
+@media (max-width: 768px) {
+    /* Make the sections stack vertically */
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    header {
+        padding: 0px;
+    
+    }
+    .profile-photo {
+        width: 100%; 
+        height: auto; 
+    }
+
+    .project-card {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+    
+    p {
+        font-size: 14px;
+    }
+    button {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar a {
+        padding: 10px;
+        display: block;
+    }
+    .swoop {
+        width: 100%; /* Make it fit within the screen width */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Prevent extra space below */
+        overflow: hidden;
+    }
+    .swoop2 {
+        width: auto; 
+        height: 25%; 
+        display: block; 
+        overflow: hidden;
+    }
 }
