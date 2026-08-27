@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,8 +19,9 @@
             </ul>
         </nav>
     </header>
+    <div class="hero-glow" aria-hidden="true"></div>
     <svg class="swoop" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 480">
-        <path fill="#F5F5F5" fill-opacity="1" 
+        <path fill="#F1E4C3" fill-opacity="1"
             d="M0,0 C480,300 960,-100 1440,200 L1440,480 L0,480 Z">
         </path>
     </svg>
@@ -25,12 +29,15 @@
     <section id="about" class="about-section">
         <div class="about-content">
             <div class="about-text">
-                <h1>Hello There</h1>
-                <p>Hey, I’m Bhaavya – a Computer Science student at ELTE, Budapest with a love for solving problems and building cool things.
+                <span class="eyebrow">Welcome to my portfolio</span>
+                <h1>Hello There, I'm <span class="highlight">Bhaavya</span></h1>
+                <p>A Computer Science graduate from ELTE, Budapest with a love for solving problems and building cool things.
                     Feel free to take a look at my profile and get in touch!</p>
             </div>
             <div class="about-image">
-                <img src="media/pfp.png" alt="A profile picture" class="profile-photo">
+                <div class="photo-frame">
+                    <img src="media/pfp.png" alt="A profile picture" class="profile-photo">
+                </div>
             </div>
         </div>
     </section>
@@ -48,12 +55,12 @@
         <div class="skillset">
             <div>
                 <h3>Tech</h3>
-                <ul>
+                <ul class="tag-list">
                     <li>Java</li>
-                    <li>C#</li>  
+                    <li>C#</li>
                     <li>Object-Oriented Programming</li>
                     <li>Haskell</li>
-                    <li>Python</li> 
+                    <li>Python</li>
                     <li>PowerShell</li>
                     <li>PHP</li>
                     <li>JavaScript</li>
@@ -63,13 +70,13 @@
             </div>
             <div>
                 <h3>Personal Strengths</h3>
-                <ul>
+                <ul class="tag-list">
                     <li>Problem-Solving</li>
-                    <li>Communication</li>  
+                    <li>Communication</li>
                     <li>Time Management</li>
                     <li>Meticulous Organization</li>
                     <li>Team Work</li>
-                    <li>Curiosity-Driven Learning</li> 
+                    <li>Curiosity-Driven Learning</li>
                     <li>Leadership</li>
                 </ul>
             </div>
@@ -83,7 +90,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 Bhaavya Jayaswal</p>
+        <p>&copy; 2026 Bhaavya Jayaswal</p>
     </footer>
 </body>
 </html>
