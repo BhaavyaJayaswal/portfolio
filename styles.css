@@ -11,7 +11,7 @@
     --color-border: #E4D3A8;
     --shadow-color: rgba(139, 108, 34, 0.18);
 
-    --font-heading: 'Fraunces', Georgia, 'Times New Roman', serif;
+    --font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
     --font-body: 'Lora', Georgia, 'Times New Roman', serif;
 
     --space-sm: clamp(0.75rem, 1.5vw, 1rem);
