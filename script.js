@@ -7,6 +7,13 @@ const projects = [
         githubLink: "https://github.com/BhaavyaJayaswal/Metastream-Analyzer"
     },
     {
+        title: "Jungle Trek",
+        description: "A 2D top-down management simulation set in an African safari environment. Players run the operation across adjustable game speeds (hour/day/week), balancing visitor satisfaction, herbivore and carnivore populations, and capital reserves, with a minimap and day-night cycle. Victory requires keeping every metric above threshold for consecutive months; running out of money or losing all the animals ends the game.",
+        techStack: "Python, Arcade",
+        imageUrl: "media/jungle_trek.png",
+        githubLink: "https://github.com/BhaavyaJayaswal/Jungle-Trek"
+    },
+    {
         title: "Labyrinth",
         description: "Java-based game where the player must clear multiple levels of a maze while avoiding an evil dragon. The dragon moves until it encounters a wall, making strategic movement crucial. Implements a database to maintain a scoreboard of the top 10 players. Complies with OOP principles.",
         techStack: "Java (Swing, AWT), SQL",
