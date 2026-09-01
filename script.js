@@ -1,5 +1,12 @@
 const projects = [
     {
+        title: "Metastream Analyzer",
+        description: "A Streamlit application for predicting and analyzing network throughput requirements during adaptive video streaming quality transitions. Given time-series network metrics, trained ML models (Random Forest, Gradient Boosting, XGBoost) predict the throughput needed to sustain a target VMAF quality level, and the app visualizes prediction accuracy against ground truth. Automatically detects and lets users drill into \"error regions\" where predictions deviate beyond a configurable threshold, with rolling error, CDF, and zoomed-region charts. Includes a full model-training pipeline (dataset construction from raw packet-capture ZIPs, train/test splitting, class balancing across games, background-threaded hyperparameter grid search with live progress and cancellation) and a save/load system for trained models.",
+        techStack: "Python, Streamlit, scikit-learn, XGBoost, Plotly, Pandas/NumPy, joblib",
+        imageUrl: "media/analyzer.png",
+        githubLink: "https://github.com/BhaavyaJayaswal/Metastream-Analyzer"
+    },
+    {
         title: "Labyrinth",
         description: "Java-based game where the player must clear multiple levels of a maze while avoiding an evil dragon. The dragon moves until it encounters a wall, making strategic movement crucial. Implements a database to maintain a scoreboard of the top 10 players. Complies with OOP principles.",
         techStack: "Java (Swing, AWT), SQL",
