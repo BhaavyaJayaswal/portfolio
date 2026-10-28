@@ -1,5 +1,20 @@
 const projects = [
     {
+        title: "Ask a Primary Source",
+        description: "A retrieval-augmented generation (RAG) chatbot that answers history questions using citable passages from primary sources: Tacitus's Germania, Bede's Ecclesiastical History, and Machiavelli's The Prince. Relevant passages are retrieved through Chroma vector search, and the model must answer only from that context and cite the source behind every claim, which keeps hallucination down. The model can also call a custom MCP (Model Context Protocol) server on its own mid-answer to look up exact historical dates when the retrieved text isn't precise enough. A pytest evaluation suite, which includes a documented known limitation, runs in GitHub Actions CI. The Dockerized FastAPI backend is deployed on Render, and the Streamlit frontend runs on Streamlit Community Cloud.",
+        techStack: "Python, FastAPI, Google Gemini API, ChromaDB, Model Context Protocol (MCP), Docker, GitHub Actions, Streamlit, pytest",
+        imageUrl: "media/RAG.png",
+        githubLink: "https://github.com/BhaavyaJayaswal/ask-a-primary-source",
+        liveLink: "https://ask-a-primary-source.streamlit.app"
+    },
+    {
+        title: "ArtisanHub",
+        description: "A Spring Boot REST API for a creative-commission marketplace where buyers commission custom art, music, writing and 3D work from creators. Every commission follows an enforced state machine: the brief, counter-offer price negotiation, simulated escrow, deliverables, up to three revisions, and approval that releases payment. Cancellations trigger refunds, and disputes go to an admin. Every action checks that the transition is legal and that the user is the commission's actual buyer or creator. Other features: JWT auth with buyer, creator and admin roles, creator portfolios, reviews, event-driven in-app and email notifications, Redis-backed login rate limiting, an admin panel, and Swagger UI docs. CI on GitHub Actions runs the tests against real MySQL and Redis containers.",
+        techStack: "Java 21, Spring Boot, Spring Security, JWT, Spring Data JPA, MySQL, Redis, Docker, GitHub Actions, Swagger/OpenAPI",
+        imageUrl: "media/api_icon.png",
+        githubLink: "https://github.com/BhaavyaJayaswal/artisanhub"
+    },
+    {
         title: "Metastream Analyzer",
         description: "A Streamlit application for predicting and analyzing network throughput requirements during adaptive video streaming quality transitions. Given time-series network metrics, trained ML models (Random Forest, Gradient Boosting, XGBoost) predict the throughput needed to sustain a target VMAF quality level, and the app visualizes prediction accuracy against ground truth. Automatically detects and lets users drill into \"error regions\" where predictions deviate beyond a configurable threshold, with rolling error, CDF, and zoomed-region charts. Includes a full model-training pipeline (dataset construction from raw packet-capture ZIPs, train/test splitting, class balancing across games, background-threaded hyperparameter grid search with live progress and cancellation) and a save/load system for trained models.",
         techStack: "Python, Streamlit, scikit-learn, XGBoost, Plotly, Pandas/NumPy, joblib",
@@ -104,6 +119,18 @@ function createProjectCard(project) {
     card.appendChild(description);
     card.appendChild(techStack);
     card.appendChild(githubLink);
+
+    if (project.liveLink) {
+        const separator = document.createTextNode(" · ");
+        const liveLink = document.createElement('a');
+        liveLink.href = project.liveLink;
+        liveLink.target = "_blank";
+        liveLink.classList.add('github-link');
+        liveLink.textContent = "View Live Demo";
+
+        card.appendChild(separator);
+        card.appendChild(liveLink);
+    }
 
     return card;
 }
